@@ -4,7 +4,40 @@ container:
   properties: {html: '@theme:standard-page.html'}
 components:
 - type: ColumnPanel
-  properties: {col_widths: '{}'}
-  name: column_panel_1
+  properties: {}
+  name: content_panel
   layout_properties: {slot: default}
-  components: []
+  components:
+  - name: label_1
+    properties: {text: Uber Pickups in NYC, role: headline, bold: true, align: left}
+    type: Label
+    layout_properties: {grid_position: 'OOUBHU,NLIIPO'}
+  - name: spacer_1
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'OGXSIE,APINES BMUJHO,CDMYGG'}
+  - name: label_2
+    properties: {text: Number of pickups per hour, role: title}
+    type: Label
+    layout_properties: {grid_position: 'OGXSIE,APINES GKWPCC,WHPOIV'}
+  - name: plot_1
+    properties: {}
+    type: Plot
+    layout_properties: {grid_position: 'OGXSIE,APINES VNHSPS,UFISAC', row_background: 'theme:Primary'}
+  - name: drop_down_1
+    properties: {}
+    type: DropDown
+    layout_properties: {grid_position: 'OGXSIE,SWEFPD DTXIEM,ROYIPE'}
+  - name: label_3
+    properties: {text: mapbox_title, role: title}
+    type: Label
+    layout_properties: {grid_position: 'OGXSIE,SWEFPD YSKBVY,FVMHSP'}
+  - name: plot_2
+    properties: {}
+    type: Plot
+    layout_properties: {grid_position: 'OGXSIE,SWEFPD QTJLUL,LDWMBH'}
+  - name: file_loader_1
+    properties: {text: DAT File}
+    type: FileLoader
+    layout_properties: {grid_position: 'YPCSUP,SIRFMI'}
+    event_bindings: {change: file_loader_1_change}
