@@ -23,6 +23,6 @@ import plotly.graph_objects as go
 @anvil.server.callable
 def get_uber_data(csv_file):
     #read in 10000 rows of data 
-    df = pd.read_csv(csv_file, nrows=10000)
+    df = pd.read_csv(create_file(csv_file), nrows=10000)
     #print the first 5 rows of the dataframe
     print(df.head())

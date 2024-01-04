@@ -23,4 +23,5 @@ class Form1(Form1Template):
     """This method is called when a new file is loaded into this FileLoader"""
     result = anvil.server.call('get_uber_data', file)
     print(result)
+    c.clear()
   
